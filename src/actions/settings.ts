@@ -51,7 +51,7 @@ const settings = async(
         }        
     }
 
-    if(values.password && values.newPassword && db.dbUser.password){
+    if(values.password && values.newPassword && dbUser.password){
         const passwordsMatch = await bcryptjs.compare(
             values.password,
             dbUser.password,
